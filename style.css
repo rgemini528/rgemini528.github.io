@@ -1,0 +1,404 @@
+@charset "utf-8";
+
+/* Google Fonts */
+
+/*  <weight>: Use a value from 400 to 700
+.instrument-sans-<uniquifier> {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+
+
+/* .noto-sans-jp-<uniquifier> {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+
+/* 共通設定 -------------------- */
+body {
+    background-color: #fafbf6;
+    color: #4a4a4a;
+    font-family: "Noto Sans JP", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    margin: 0 auto;
+    /* max-width: 1280px; */
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #4a4a4a;
+}
+
+header,
+footer {
+    width: 100%;
+    max-width: 1920px;
+}
+
+section {
+    margin-bottom: 200px;
+}
+
+h2 {
+    font-size: 64px;
+    margin-left: -15px;
+}
+
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.sec-title {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.sec-title img {
+    width: 64px;
+    height: 64px;
+}
+
+
+/* ヘッダー -------------------- */
+header {
+    margin: 50px auto 30px;
+    padding: 0 100px;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 48px;
+}
+
+.header-gnav-item {
+    padding-left: 30px;
+    font-size: 24px;
+}
+
+.header-gnav-link:hover {
+    color: #00b34c;
+    transition: 0.3s;
+}
+
+
+/* フッター -------------------- */
+footer {
+    margin: 50px auto;
+    padding: 30px 100px 0;
+    justify-content: space-between;
+}
+
+.footer-gnav-item {
+    padding-right: 20px;
+    font-size: 16px;
+}
+
+.footer-gnav-link:hover {
+    color: #00b34c;
+    transition: 0.3s;
+}
+
+small {
+    font-family: "Instrument Sans", sans-serif;
+}
+
+
+/* トップビジュアル -------------------- */
+.topvisual {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.topvisual img {
+    width: 1200px;
+    height: 650px;
+}
+
+
+/* Profile -------------------- */
+.profile-info,
+.profile-skill,
+.profile-strength {
+    margin: 30px auto 100px;
+    padding: 0 100px;
+}
+
+/* Profile info */
+.subtitle {
+    font-size: 48px;
+    letter-spacing: 0.1em;
+    padding-left: 50px;
+}
+
+.profile-info img {
+    width: 350px;
+    height: 300px;
+    background: gainsboro;
+}
+
+.info-txt {
+    margin-left: 30px;
+}
+
+.info-txt p:first-child {
+    font-size: 32px;
+}
+
+.info-txt p:nth-child(2) {
+    font-family: "Instrument Sans", sans-serif;
+
+}
+
+.info-txt p:last-child {
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+/* Profile skill */
+.profile-skill img {
+    width: 100%;
+    max-width: 880px;
+    height: 300px;
+}
+
+/* Profile strength */
+.memo {
+    width: 260px;
+    height: auto;
+    padding: 20px;
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+}
+
+.memo p:first-child {
+    font-size: 40px;
+}
+
+.memo p:last-child {
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.white,
+.green {
+    width: 100%;
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+
+.white div {
+    background: #fafbf6;
+}
+
+.green {
+    margin-top: 30px;
+    color: #fafbf6;
+}
+
+.green div {
+    background: #00b34c;
+}
+
+.green-title {
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+
+/* Works -------------------- */
+.worksBox {
+    width: 880px;
+    margin: 30px auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.worksImg {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 50px;
+    background: gainsboro;
+}
+
+/* Works モーダル */
+/* .modal-open-button {
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+} */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+    opacity: 0;
+    transition: opacity 0.5s, scale 0s 0.5s;
+    scale: 0;
+}
+
+.modal:target {
+    opacity: 1;
+    transition: opacity 0.5s;
+    scale: 1;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #4a4a4a;
+    text-decoration: none;
+    cursor: pointer;
+    transform: translate(50%, -50%);
+}
+
+.modal-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1080px;
+    max-height: 90%;
+    padding: 20px;
+    margin: auto;
+    overflow: scroll;
+    background-color: #fafbf6;
+    border-radius: 5px;
+}
+
+.modal-content {
+    justify-content: center;
+}
+
+.modal-content img {
+    width: auto;
+    max-height: 600px;
+}
+
+.modal-txt {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.modal-title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.modal-memo {
+    padding-bottom: 10px;
+}
+
+.modal-link a {
+    color: #00b34c;
+}
+
+
+/* Contact -------------------- */
+.lead-form {
+    text-align: center;
+    font-size: 20px;
+}
+
+form {
+    margin-top: 100px;
+    width: 880px;
+    margin: 50px auto;
+}
+
+.item {
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    ;
+    /* border-left: solid 3px #00b34c; */
+    color: #4a4a4a;
+    /* padding-left: 10px; */
+}
+
+.inputs {
+    float: left;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"] {
+    border: solid 2px #00b34c;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: both;
+    border: solid 2px #00b34c;
+    border-radius: 5px;
+    padding: 10px;
+    height: 160px;
+    font-size: 15px;
+}
+
+.btn-area {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background: #00b34c;
+    border: none;
+    color: #fafbf6;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
